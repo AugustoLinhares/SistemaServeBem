@@ -1,0 +1,32 @@
+﻿<Window x:Class="SisServeBem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SisServeBem"
+        mc:Ignorable="d"
+        Title="Menu" Height="720" Width="1280">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="122*"/>
+            <ColumnDefinition Width="238*"/>
+            <ColumnDefinition Width="122*"/>
+            <ColumnDefinition Width="81*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="175*"/>
+            <RowDefinition Height="141*"/>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="141*"/>
+            <RowDefinition Height="175*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="93" Width="178">
+            <TextBlock Text="Menu" FontSize="70"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
