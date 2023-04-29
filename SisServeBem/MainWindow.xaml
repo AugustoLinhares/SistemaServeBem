@@ -5,28 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SisServeBem"
         mc:Ignorable="d"
-        Title="Menu" Height="720" Width="1280">
+        Title="Restaurante Serve Bem" Height="720" Width="1280">
     <Grid>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="81*"/>
-            <ColumnDefinition Width="122*"/>
-            <ColumnDefinition Width="238*"/>
-            <ColumnDefinition Width="122*"/>
-            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="175*"/>
-            <RowDefinition Height="141*"/>
-            <RowDefinition Height="200*"/>
-            <RowDefinition Height="141*"/>
-            <RowDefinition Height="175*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="93" Width="178">
-            <TextBlock Text="Menu" FontSize="70"/>
-        </StackPanel>
+
 
     </Grid>
 </Window>
