@@ -24,5 +24,10 @@ namespace SisServeBem
         {
             InitializeComponent();
         }
+
+        private void txtNome_TextInput(object sender, TextCompositionEventArgs e)
+        {
+
+        }
     }
 }

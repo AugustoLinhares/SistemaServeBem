@@ -5,26 +5,96 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SisServeBem"
         mc:Ignorable="d"
-        Title="Restaurante Serve Bem" Height="720" Width="1280">
+        Title="CADASTRAR CLIENTE" Height="720" Width="1280">
+
     <Grid>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            
         </Grid.RowDefinitions>
 
+        <StackPanel Grid.Column="1">
+            <Image Source="/Imagens/imagemUsuario.png" MinHeight="200"  MinWidth="200" Margin="0,25,0,0" HorizontalAlignment="Center" Width="200"/>
+            
+            <Label Content="Nome:" FontSize="25" HorizontalAlignment="Left"/>
+            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black" Name="txtNome">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="20"/>
+                        <Setter Property="Padding" Value="6,0,6,0"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
 
+            <Label Content="CPF:" FontSize="25" HorizontalAlignment="Left"/>
+            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="20"/>
+                        <Setter Property="Padding" Value="6,0,6,0"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+            <Label Content="Número:" FontSize="25" HorizontalAlignment="Left"/>
+            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="20"/>
+                        <Setter Property="Padding" Value="6,0,6,0"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+            <Label Content="Email:" FontSize="25" HorizontalAlignment="Left"/>
+            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="20"/>
+                        <Setter Property="Padding" Value="6,0,6,0"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+            <Label Content="Endereço:" FontSize="25" HorizontalAlignment="Left"/>
+            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="20"/>
+                        <Setter Property="Padding" Value="6,0,6,0"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+            
+
+        </StackPanel>
+
+        <DockPanel Grid.Column="1" VerticalAlignment="Bottom" Margin="0,0,0,8">
+            
+            <Button Content="Salvar" FontSize="25" Width="200" HorizontalAlignment="Left">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button Content="Cancelar" FontSize="25" Width="200" HorizontalAlignment="Right">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+        </DockPanel>
 
     </Grid>
 </Window>
