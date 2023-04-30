@@ -8,10 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Imagens\botaoVoltar.png" />
     <None Remove="Imagens\imagemUsuario.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Imagens\botaoVoltar.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Imagens\imagemUsuario.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

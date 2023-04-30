@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SisServeBem"
         mc:Ignorable="d"
-        Title="CADASTRAR CLIENTE" Height="720" Width="1280">
+        BorderBrush="White"
+        
+        Title="Cadastrar Cliente" Height="720" Width="1280" Foreground="White">
+
 
     <Grid>
 
@@ -16,12 +19,18 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            
+
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Column="1">
-            <Image Source="/Imagens/imagemUsuario.png" MinHeight="200"  MinWidth="200" Margin="0,25,0,0" HorizontalAlignment="Center" Width="200"/>
-            
+        <StackPanel Grid.Column="0">
+            <Button Height="40" Width="60" HorizontalAlignment="Left" Margin="0,30,0,0" BorderBrush="White" Foreground="{x:Null}" Background="{x:Null}">
+                <Image Source="/Imagens/botaoVoltar.png" />
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Margin="0,0,0,0">
+            <Image Source="/Imagens/imagemUsuario.png" MaxWidth="200" MinHeight="100" MinWidth="100" Margin="0,25,0,0" HorizontalAlignment="Center"/>
+
             <Label Content="Nome:" FontSize="25" HorizontalAlignment="Left"/>
             <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black" Name="txtNome">
                 <TextBox.Resources>
@@ -72,29 +81,27 @@
                 </TextBox.Resources>
             </TextBox>
 
-            
+            <DockPanel Grid.Column="1" Margin="0,15,0,8" Width="Auto">
+
+                <Button Content="Salvar" FontSize="25" MinWidth="190" Width="Auto" Margin="0,0,10,0">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="20"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <Button Content="Cancelar" FontSize="25" MinWidth="200" Width="Auto" Margin="10,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="20"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+            </DockPanel>
 
         </StackPanel>
-
-        <DockPanel Grid.Column="1" VerticalAlignment="Bottom" Margin="0,0,0,8">
-            
-            <Button Content="Salvar" FontSize="25" Width="200" HorizontalAlignment="Left">
-                <Button.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="20"></Setter>
-                    </Style>
-                </Button.Resources>
-            </Button>
-
-            <Button Content="Cancelar" FontSize="25" Width="200" HorizontalAlignment="Right">
-                <Button.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="20"></Setter>
-                    </Style>
-                </Button.Resources>
-            </Button>
-
-        </DockPanel>
 
     </Grid>
 </Window>
