@@ -18,9 +18,9 @@ namespace SisServeBem
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CadastroCliente : Window
     {
-        public MainWindow()
+        public CadastroCliente()
         {
             InitializeComponent();
         }
