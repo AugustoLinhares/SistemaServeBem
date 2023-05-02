@@ -17,9 +17,9 @@ namespace TelaFornecedor
     /// <summary>
     /// Lógica interna para CadastroFuncionario.xaml
     /// </summary>
-    public partial class CadastroFuncionario : Window
+    public partial class CadastroProduto : Window
     {
-        public CadastroFuncionario()
+        public CadastroProduto()
         {
             InitializeComponent();
         }
