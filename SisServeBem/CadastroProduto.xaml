@@ -34,7 +34,7 @@
         <WrapPanel HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="770">
             <Label Content="" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="32"/>
 
-            <Image HorizontalAlignment="Left" Height="46" VerticalAlignment="Center" Width="64" Source="C:\Users\Usuario\Documents\IFRO\Curso\Progamação desktop\TelaFornecedor\TelaFornecedor\Imagens\Captura de tela 2023-04-29 190942.png"/>
+            <Image HorizontalAlignment="Left" Height="46" VerticalAlignment="Center" Width="64" Source="/Imagens/Captura de tela 2023-04-29 190942.png"/>
             <Label Content="Restaurante Serve Bem" Foreground="#FF021E44" FontSize="18" FontFamily="Arial" Height="29" Width="399"/>
         </WrapPanel>
         
