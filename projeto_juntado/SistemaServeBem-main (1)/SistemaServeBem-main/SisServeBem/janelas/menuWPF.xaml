@@ -1,0 +1,136 @@
+﻿<Window x:Class="SisServeBem.menuWPF"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SisServeBem"
+        mc:Ignorable="d"
+        Title="menuWPF" Height="720" Width="1280">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+
+        <!--LOGO-->
+        <StackPanel Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-40, 0, 250, 280">
+            <Image x:Name="___Image___logo_" Width="50" Height="Auto" MinWidth="200" MinHeight="100" Source="/cadastro de funcionario (1).png" Margin="20,-25,-150,100">
+            </Image>
+        </StackPanel>
+        <!---->
+
+        <!--TITULO SERVE BEM-->
+        <Label x:Name="serve_bem" Content="Restaurante Serve Bem" HorizontalAlignment="Left" Margin="70,-2,0,0" VerticalAlignment="Top" Width="660" FontSize="42" FontFamily="Times New Roman" FontWeight="Bold" Foreground="#FF021E44" Grid.ColumnSpan="3"/>
+        <!---->
+
+        <!--DETALHE - LINHA-->
+        <Image x:Name="___Image___linha_" Margin="-98,-22,-13,-142" Source="/Imagens/cadastro de funcionario (2) (1).png" Stretch="Fill" Grid.ColumnSpan="4"/>
+        <!---->
+
+        <!--INTERROGAÇÃO-->
+        <StackPanel Grid.Column="3" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="-30,10,-70,0">
+            <Image x:Name="___Image___duvida_" Width="50" Height="Auto" MinWidth="200" MinHeight="100" Source="/Imagens/cadastro de funcionario (7) (1).png" Margin="0,42,100,0"/>
+        </StackPanel>
+        <!---->
+
+        <!--BANDEIRA DO BRASIL-->
+        <StackPanel Grid.Column="3" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="-30,10,-70,0">
+            <Image x:Name="___Image___bandeira_" Width="50" Height="Auto" MinWidth="200" MinHeight="100" Source="/Imagens/cadastro de funcionario (8) (1).png" Margin="0,41,50,0"/>
+        </StackPanel>
+        <!---->
+
+        <!--MODO NOTURNO-->
+        <StackPanel Grid.Column="3" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="-30,10,-70,0">
+            <Image x:Name="___Image___lua_" Width="50" Height="Auto" MinWidth="150" MinHeight="90" Source="/Imagens/cadastro de funcionario (9) (1).png" Margin="0,55,170,0"/>
+        </StackPanel>
+        <!---->
+
+        <!--SETA-->
+        <StackPanel Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-30,10,-70,0">
+            <Image x:Name="___Image___seta_" Width="50" Height="Auto" MinWidth="200" MinHeight="90"  Source="/Imagens/cadastro de funcionario (10) (1).png" Margin="-10,32,27,80"/>
+        </StackPanel>
+        <!---->
+
+        <!--FUNCIONARIOS-->
+        <StackPanel Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-120, 10, -70, 0">
+            <!--<Label Content="    Funcionários" Height="46" Width="250" FontFamily="Arial" FontSize="30" Margin="-2,-245,-95,-100" HorizontalAlignment="Center"></Label>-->
+            <Button x:Name="bt_funcionario" Height="376" Width="444" Background="transparent" Click="bt_funcionario_Click" >
+                <!-- <Button IsHitTestVisible="False"  Background="transparent"  Cursor="Hand"/> -->
+                <Image Source="C:\Users\Usuario\Downloads\projeto_juntado\SistemaServeBem-main (1)\SistemaServeBem-main\SisServeBem\Imagens\cadastro_de_funcionario-removebg-preview (1).png"></Image>
+            </Button>
+        </StackPanel>
+        <!---->
+
+        <!--FINANCEIRO-->
+        <StackPanel Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-120, 10, -70, 0">
+            <Image x:Name="___Image___financeiro_" Width="500" Height="Auto" MinWidth="650" MinHeight="400" Source="/Imagens/cadastro de funcionario (12) (1).png" Margin="-61,40,0,0"/>
+            <Label Content="Financeiro" Height="46" Width="250" FontFamily="Arial" FontSize="30" Margin="14,-302,-97,-104" HorizontalAlignment="Center"/>
+            <Button IsHitTestVisible="False" Content="" Height="166" Width="160" Margin="-30,-510,-95,-100" Background="transparent" BorderThickness="0" Cursor="Hand"/>
+        </StackPanel>
+        <!---->
+
+        <!--ESTOQUE-->
+        <StackPanel Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-120, 10, -70, 0">
+            <Image x:Name="___Image___estoque_" Width="500" Height="Auto" MinWidth="750" MinHeight="400" Source="/Imagens/cadastro de funcionario (13) (1).png" Margin="-100,30,0,0"/>
+            <Label Content="Estoque" Height="46" Width="250" FontFamily="Arial" FontSize="30" Margin="69,-322,-95,-100" HorizontalAlignment="Center"/>
+            <Button IsHitTestVisible="False" Content="" Height="166" Width="160" Margin="-30,-510,-95,-100" Background="transparent" BorderThickness="0" Cursor="Hand"/>
+        </StackPanel>
+        <!---->
+
+        <!--FORNECEDOR-->
+        <StackPanel Grid.Column="3" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-120, 10, -70, 0">
+            <!--<Label Content="Fornecedor" Height="46" Width="250" FontFamily="Arial" FontSize="30" Margin="26,-318,-95,-100" HorizontalAlignment="Center"/>-->
+            <Button x:Name="bt_fornecedor" Height="166" Width="160" Margin="180,150,0,0" Background="Transparent" BorderThickness="0" Cursor="IBeam" Click="bt_fornecedor_Click" Canvas.ZIndex="1">
+                <Image Source="C:\Users\Usuario\Downloads\projeto_juntado\SistemaServeBem-main (1)\SistemaServeBem-main\SisServeBem\Imagens\cadastro de funcionario (14) (1).png" />
+            </Button>
+
+        </StackPanel>
+        <!---->
+
+        <!--VENDA-->
+        <StackPanel Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-150, 270, -70, 0">
+            <Image x:Name="___Image___vendas_" Width="500" Height="Auto" MinWidth="750" MinHeight="400" Source="/Imagens/cadastro de funcionario (15) (1).png" Margin="-61,20,0,0"/>
+            <Label Content="Vendas" Height="46" Width="250" FontFamily="Arial" FontSize="30" Margin="121,-324,-95,-100" HorizontalAlignment="Center"/>
+            <Button IsHitTestVisible="False" Content="" Height="166" Width="160" Margin="-30,-510,-95,-100" Background="transparent" BorderThickness="0" Cursor="Hand"/>
+        </StackPanel>
+        <!---->
+
+        <!--RELATORIO-->
+        <StackPanel Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-150, 270, -70, 0" Width="530">
+            <Image x:Name="___Image___relatorios_" Width="500" Height="Auto" MinWidth="750" MinHeight="400" Source="/Imagens/cadastro de funcionario (16) (1).png" Margin="-61,20,0,0"/>
+            <Label Content="Relatório" Height="46" Width="250" FontFamily="Arial" FontSize="30" Margin="87,-324,-95,-100" HorizontalAlignment="Center"/>
+            <Button IsHitTestVisible="False" Content="" Height="166" Width="160" Margin="-30,-510,-95,-100" Background="transparent" BorderThickness="0" Cursor="Hand"/>
+        </StackPanel>
+        <!---->
+
+        <!--CLIENTES-->
+        <StackPanel Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-150, 270, -70, 0">
+            <!-- <Image x:Name="___Image___clientes_" Width="500" Height="Auto" MinWidth="750" MinHeight="400" Source="/Imagens/cadastro de funcionario (17) (1).png" Margin="-61,20,0,0"/> -->
+            <!--<Label Content="Clientes" Height="46" Width="250" FontFamily="Arial" FontSize="30" Margin="121,-324,-95,-100" HorizontalAlignment="Center"/>-->
+            <!--<Button x:Name="bt_cadsCliente" IsHitTestVisible="False" Content="" Height="166" Width="160" Margin="-30,-510,-95,-100" Background="transparent" BorderThickness="0" Cursor="Hand" Click="bt_cadsCliente_Click"/> -->
+            <Button x:Name="bt_cliente" Background="transparent" Height="376" Width="348" Click="bt_cliente_Click">
+                <Image Source="C:\Users\Usuario\Downloads\projeto_juntado\SistemaServeBem-main (1)\SistemaServeBem-main\SisServeBem\Imagens\cadastro de funcionario (17) (1).png" Width="339" Height="231"></Image>
+            </Button>
+        </StackPanel>
+        <!---->
+
+        <!--PRODUTOS-->
+        <StackPanel Grid.Column="3" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-150, 270, -70, 0">
+            <Button x:Name="bt_produto" Background="Transparent" Height="247" Width="414" Click="Button_Click">
+                <Image Source="C:\Users\Usuario\Downloads\projeto_juntado\SistemaServeBem-main (1)\SistemaServeBem-main\SisServeBem\Imagens\cadastro de funcionario (18) (1).png" Height="179" Width="326"/>
+            </Button>
+            <!-- <Image x:Name="___Image___produtos_" Width="500" Height="Auto" MinWidth="750" MinHeight="400" Source="/Imagens/cadastro de funcionario (18) (1).png" Margin="-61,20,0,0"/> -->
+            <!--<Label Content="Produtos" Height="46" Width="250" FontFamily="Arial" FontSize="30" Margin="93,-327,-95,-100" HorizontalAlignment="Center"/>-->
+            <!--<Button x:Name="bt_CadsProduto" IsHitTestVisible="False" Content="" Height="166" Width="160" Margin="-30,-510,-95,-100" Background="transparent" BorderThickness="0" Cursor="Hand" Click="bt_CadsProduto_Click"/> -->
+        </StackPanel>
+        <!---->
+
+
+
+
+    </Grid>
+</Window>
