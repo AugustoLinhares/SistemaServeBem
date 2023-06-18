@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TelaFornecedor"
         mc:Ignorable="d"
-        Title="TelaFornecedor" Height="450" Width="800">
+        Title="TelaFornecedor" Height="450" Width="950">
     <Grid>
-        <StackPanel HorizontalAlignment="Left" Height="199" Margin="22,83,0,0" VerticalAlignment="Top" Width="292">
+        <StackPanel HorizontalAlignment="Left" Height="199" Margin="27,0,0,0" VerticalAlignment="Center" Width="292">
             <Label Content="Nome Fantasia:" Height="33" Width="275" FontSize="16" Foreground="#FF021E44"/>
             <Border BorderBrush="#FF021E44" BorderThickness="5" Height="30" Width="271" CornerRadius="10">
                 <TextBox x:Name="txtNomeFantasia" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="   Digite aqui..." VerticalAlignment="Center" Width="271" Background="#FF021E44" Foreground="White" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" FontFamily="Arial" />
@@ -18,7 +18,7 @@
                 <TextBox x:Name="txtCnpj" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="   Digite aqui..." VerticalAlignment="Center" Width="271" Background="#FF021E44" Foreground="White" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" FontFamily="Arial" />
             </Border>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="199" Margin="441,83,0,0" VerticalAlignment="Top" Width="284">
+        <StackPanel HorizontalAlignment="Left" Height="199" Margin="482,0,0,0" VerticalAlignment="Center" Width="284">
             <Label Content="Endereço:"  Height="33" Width="275" FontSize="16" Foreground="#FF021E44"/>
             <Border BorderBrush="#FF021E44" BorderThickness="5" Height="30" Width="271" CornerRadius="10">
                 <TextBox x:Name="txtEndereco" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="   Digite aqui..." VerticalAlignment="Center" Width="271" Background="#FF021E44" Foreground="White" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" FontFamily="Arial" />
@@ -31,17 +31,35 @@
         </StackPanel>
         <WrapPanel HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="770">
             <Label Content="" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="32"/>
-
-            <Image HorizontalAlignment="Left" Height="46" VerticalAlignment="Center" Width="64" Source="C:\Users\Usuario\Documents\IFRO\Curso\Progamação desktop\TelaFornecedor\TelaFornecedor\Imagens\Captura de tela 2023-04-29 190942.png"/>
-            <Label Content="Restaurante Serve Bem" Foreground="#FF021E44" FontSize="18" FontFamily="Arial" Height="29" Width="399"/>
+            <Image HorizontalAlignment="Left" Height="56" VerticalAlignment="Top" Width="66" Source="C:\Users\2021102020035\Downloads\SistemaServeBem-main\SistemaServeBem-main\SisServeBem\Imagens\Captura de tela 2023-04-29 190942.png"/>
+            <Label Content="Restaurante Serve Bem" Foreground="#FF021E44" FontSize="18" FontFamily="Arial" Height="28" Width="399"/>
         </WrapPanel>
-        <WrapPanel HorizontalAlignment="Center" Height="53" Margin="0,340,0,0" VerticalAlignment="Top" Width="540">
-            <Button x:Name="btCancelar" Content="Cancelar" RenderTransformOrigin="0.746,-0.243" Background="#FFFF914D" FontFamily="Arial" Height="51" Width="152" Foreground="White" FontSize="20" Click="btCancelar_Click"/>
+        <WrapPanel HorizontalAlignment="Center" Height="53" Margin="0,340,0,0" VerticalAlignment="Top" Width="386">
             <Label Content="" HorizontalAlignment="Center" Height="42" VerticalAlignment="Top" Width="35"/>
             <Button x:Name="btSalvar" Content="Salvar" Background="#FF029B3A" FontFamily="Arial" Height="51" Width="152" Foreground="White" FontSize="20"/>
             <Label Content="" HorizontalAlignment="Center" Height="42" VerticalAlignment="Top" Width="35"/>
             <Button x:Name="btExcluir" Content="Excluir" Background="#FFFF1616" FontFamily="Arial" Height="51" Width="152" Foreground="White" FontSize="20"/>
         </WrapPanel>
+        <Image HorizontalAlignment="Left" Height="78" Margin="0,60,0,0" VerticalAlignment="Top" Width="140" Source="C:\Users\2021102020035\Downloads\SistemaServeBem-main\SistemaServeBem-main\SisServeBem\cadastro de funcionario (10) (1).png"/>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,-7,-105,0">
+            <Image x:Name="___Image___duvida_" Width="50" Height="Auto" MinWidth="200" MinHeight="100" Source="/cadastro de funcionario (7) (1).png" Margin="0,42,100,0"/>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,-7,-105,0">
+            <Image x:Name="___Image___bandeira_" Width="50" Height="Auto" MinWidth="200" MinHeight="100" Source="/cadastro de funcionario (8) (1).png" Margin="0,41,50,0"/>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,-7,-105,0">
+            <Image x:Name="___Image___lua_" Width="50" Height="Auto" MinWidth="150" MinHeight="90" Source="/cadastro de funcionario (9) (1).png" Margin="0,55,170,0"/>
+        </StackPanel>
+        <Image HorizontalAlignment="Left" Height="621" Margin="-3,2,0,0" VerticalAlignment="Top" Width="1094" Source="C:\Users\2021102020035\Downloads\SistemaServeBem-main\SistemaServeBem-main\SisServeBem\cadastro de funcionario (2) (1).png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.195"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-1.866"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
 
     </Grid>
 </Window>
