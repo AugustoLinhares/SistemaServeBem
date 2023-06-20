@@ -10,22 +10,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace SisServeBem
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Lógica interna para ConsultarFornecedor.xaml
     /// </summary>
-    public partial class CadastroCliente : Window
+    public partial class ConsultarFornecedor : Window
     {
-        public CadastroCliente()
+        public ConsultarFornecedor()
         {
             InitializeComponent();
         }
 
-        private void txtNome_TextInput(object sender, TextCompositionEventArgs e)
+        private void btCancelar_Click(object sender, RoutedEventArgs e)
         {
 
         }

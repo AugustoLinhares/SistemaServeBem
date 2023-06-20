@@ -23,16 +23,16 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Column="0">
-            <Button Height="40" Width="60" HorizontalAlignment="Left" Margin="0,30,0,0" BorderBrush="White" Foreground="{x:Null}" Background="{x:Null}">
+            <Button Height="40" Width="60" HorizontalAlignment="Left" Margin="0,30,0,0" BorderBrush="White" Foreground="{x:Null}" Background="{x:Null}" Cursor="IBeam">
                 <Image Source="/Imagens/botaoVoltar.png" />
             </Button>
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Margin="0,0,0,0">
-            <Image Source="/Imagens/imagemUsuario.png" MaxWidth="200" MinHeight="100" MinWidth="100" Margin="0,25,0,0" HorizontalAlignment="Center"/>
+        <StackPanel Margin="317,0,296,0" Grid.ColumnSpan="3">
+            <Image Source="/Imagens/imagemUsuario.png" MaxWidth="200" MinHeight="100" MinWidth="100" Margin="0,25,0,0" HorizontalAlignment="Center" Height="159" Width="171"/>
 
             <Label Content="Nome:" FontSize="25" HorizontalAlignment="Left"/>
-            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black" Name="txtNome">
+            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black" Name="txtNome" Height="33">
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="20"/>
@@ -41,8 +41,8 @@
                 </TextBox.Resources>
             </TextBox>
 
-            <Label Content="CPF:" FontSize="25" HorizontalAlignment="Left"/>
-            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black">
+            <Label Content="CPF:" FontSize="25" HorizontalAlignment="Left" Height="40"/>
+            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black" Height="33" x:Name="txtCPF">
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="20"/>
@@ -51,8 +51,8 @@
                 </TextBox.Resources>
             </TextBox>
 
-            <Label Content="Número:" FontSize="25" HorizontalAlignment="Left"/>
-            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black">
+            <Label Content="Número:" FontSize="25" HorizontalAlignment="Left" Height="41"/>
+            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black" Height="30" x:Name="txtNumero">
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="20"/>
@@ -61,8 +61,18 @@
                 </TextBox.Resources>
             </TextBox>
 
-            <Label Content="Email:" FontSize="25" HorizontalAlignment="Left"/>
-            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black">
+            <Label Content="Email:" FontSize="25" HorizontalAlignment="Left" Height="38"/>
+            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black" Height="32" x:Name="txtEmail">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="20"/>
+                        <Setter Property="Padding" Value="6,0,6,0"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+            <Label Content="Cidade:" FontSize="25" HorizontalAlignment="Left"/>
+            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black" Height="35" x:Name="txtCidade">
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="20"/>
@@ -72,7 +82,7 @@
             </TextBox>
 
             <Label Content="Endereço:" FontSize="25" HorizontalAlignment="Left"/>
-            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black">
+            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black" Height="32" x:Name="txtEndereco">
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="20"/>
@@ -81,9 +91,9 @@
                 </TextBox.Resources>
             </TextBox>
 
-            <DockPanel Grid.Column="1" Margin="0,15,0,8" Width="Auto">
+            <DockPanel Grid.Column="1" Margin="0,15,0,8" Width="632">
 
-                <Button Content="Salvar" FontSize="25" MinWidth="190" Width="Auto" Margin="0,0,10,0">
+                <Button Content="Salvar" FontSize="25" MinWidth="190" Width="Auto" Margin="0,0,10,0" Click="Button_Click">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="20"></Setter>
@@ -92,6 +102,14 @@
                 </Button>
 
                 <Button Content="Cancelar" FontSize="25" MinWidth="200" Width="Auto" Margin="10,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="20"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <Button Content="Consultar" FontSize="25" MinWidth="200" Width="Auto" Margin="10,0,0,0" Click="Button_Click">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="20"></Setter>

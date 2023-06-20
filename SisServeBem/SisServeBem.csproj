@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< Updated upstream
     <None Remove="Imagens\botaoVoltar.png" />
     <None Remove="Imagens\imagemUsuario.png" />
   </ItemGroup>
@@ -19,6 +20,13 @@
     <Resource Include="Imagens\imagemUsuario.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+=======
+    <Folder Include="janelas\consultas\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.0.33" />
+>>>>>>> Stashed changes
   </ItemGroup>
 
 </Project>
