@@ -8,48 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Imagens\botaoVoltar.png" />
-    <None Remove="Imagens\cadastro de funcionario %281%29.png" />
-    <None Remove="Imagens\cadastro de funcionario %2810%29 %281%29.png" />
-    <None Remove="Imagens\cadastro de funcionario %2811%29 %281%29.png" />
-    <None Remove="Imagens\cadastro de funcionario %2812%29 %281%29.png" />
-    <None Remove="Imagens\cadastro de funcionario %2813%29 %281%29.png" />
-    <None Remove="Imagens\cadastro de funcionario %2814%29 %281%29.png" />
-    <None Remove="Imagens\cadastro de funcionario %2815%29 %281%29.png" />
-    <None Remove="Imagens\cadastro de funcionario %2816%29 %281%29.png" />
-    <None Remove="Imagens\cadastro de funcionario %2817%29 %281%29.png" />
-    <None Remove="Imagens\cadastro de funcionario %2818%29 %281%29.png" />
-    <None Remove="Imagens\cadastro de funcionario %282%29 %281%29.png" />
-    <None Remove="Imagens\cadastro de funcionario %284%29 %281%29.png" />
-    <None Remove="Imagens\cadastro de funcionario %287%29 %281%29.png" />
-    <None Remove="Imagens\cadastro de funcionario %288%29 %281%29.png" />
-    <None Remove="Imagens\cadastro de funcionario %289%29 %281%29.png" />
-    <None Remove="Imagens\Captura de tela 2023-04-29 190942.png" />
-    <None Remove="Imagens\imagemUsuario.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Imagens\cadastro de funcionario (9) (1).png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Imagens\botaoVoltar.png" />
-    <Resource Include="Imagens\cadastro de funcionario (1).png" />
-    <Resource Include="Imagens\cadastro de funcionario (10) (1).png" />
-    <Resource Include="Imagens\cadastro de funcionario (11) (1).png" />
-    <Resource Include="Imagens\cadastro de funcionario (12) (1).png" />
-    <Resource Include="Imagens\cadastro de funcionario (13) (1).png" />
-    <Resource Include="Imagens\cadastro de funcionario (14) (1).png" />
-    <Resource Include="Imagens\cadastro de funcionario (15) (1).png" />
-    <Resource Include="Imagens\cadastro de funcionario (16) (1).png" />
-    <Resource Include="Imagens\cadastro de funcionario (17) (1).png" />
-    <Resource Include="Imagens\cadastro de funcionario (18) (1).png" />
-    <Resource Include="Imagens\cadastro de funcionario (2) (1).png" />
-    <Resource Include="Imagens\cadastro de funcionario (4) (1).png" />
-    <Resource Include="Imagens\cadastro de funcionario (7) (1).png" />
-    <Resource Include="Imagens\cadastro de funcionario (8) (1).png" />
-    <Resource Include="Imagens\Captura de tela 2023-04-29 190942.png" />
-    <Resource Include="Imagens\imagemUsuario.png" />
+    <PackageReference Include="MySql.Data" Version="8.0.33" />
   </ItemGroup>
 
 </Project>
