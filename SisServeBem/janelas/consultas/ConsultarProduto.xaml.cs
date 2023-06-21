@@ -17,6 +17,7 @@ namespace SisServeBem
     /// <summary>
     /// Lógica interna para ConsultarProduto.xaml
     /// </summary>
+    /// Yeeeeeehawwwwww
     public partial class ConsultarProduto : Window
     {
         public ConsultarProduto()
