@@ -5,120 +5,60 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SisServeBem"
         mc:Ignorable="d"
-        BorderBrush="White"
-        
-        Title="Cadastrar Cliente" Height="720" Width="1280" Foreground="White">
-
-
-    <Grid>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-        <Grid.RowDefinitions>
-
-        </Grid.RowDefinitions>
-
-        <StackPanel Grid.Column="0">
-            <Button Height="40" Width="60" HorizontalAlignment="Left" Margin="0,30,0,0" BorderBrush="White" Foreground="{x:Null}" Background="{x:Null}" Cursor="IBeam">
-                <Image Source="/Imagens/botaoVoltar.png" />
-            </Button>
+        Title="Cadastro Cliente" Height="450" Width="978">
+    <Grid Margin="0,0,-57,0">
+        <Image HorizontalAlignment="Left" Height="621" Margin="-3,10,0,0" VerticalAlignment="Top" Width="1094" Source="/Imagens/cadastro de funcionario (2) (1).png"/>
+        <StackPanel HorizontalAlignment="Left" Height="199" Margin="19,83,0,0" VerticalAlignment="Top" Width="278">
+            <Label Content="Nome:" Height="33" Width="275" FontSize="16" Foreground="#FF021E44"/>
+            <Border BorderBrush="#FF021E44" BorderThickness="5" Height="30" Width="271" CornerRadius="10">
+                <TextBox x:Name="txtNome" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="271" Background="#FF021E44" Foreground="White" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" FontFamily="Arial" />
+            </Border>
+            <Label Content="" Height="58"/>
+            <Label Content="Endereço::" Height="33" Width="275" FontSize="16" Foreground="#FF021E44"/>
+            <Border BorderBrush="#FF021E44" BorderThickness="5" Height="30" Width="271" CornerRadius="10">
+                <TextBox x:Name="txtEndereco" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="271" Background="#FF021E44" Foreground="White" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" FontFamily="Arial" />
+            </Border>
         </StackPanel>
 
-        <StackPanel Margin="317,0,296,0" Grid.ColumnSpan="3">
-            <Image Source="/Imagens/imagemUsuario.png" MaxWidth="200" MinHeight="100" MinWidth="100" Margin="0,25,0,0" HorizontalAlignment="Center" Height="159" Width="171"/>
+        <StackPanel HorizontalAlignment="Left" Height="199" Margin="347,83,0,0" VerticalAlignment="Top" Width="276">
+            <Label Content="CPF:"  Height="33" Width="275" FontSize="16" Foreground="#FF021E44"/>
+            <Border BorderBrush="#FF021E44" BorderThickness="5" Height="30" Width="271" CornerRadius="10">
+                <TextBox x:Name="txtCPF" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="271" Background="#FF021E44" Foreground="White" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" FontFamily="Arial" />
+            </Border>
+            <Label Content="" Height="58"/>
+            <Label Content="Número::"  Height="33" Width="275" FontSize="16" Foreground="#FF021E44"/>
+            <Border BorderBrush="#FF021E44" BorderThickness="5" Height="30" Width="271" CornerRadius="10">
+                <TextBox x:Name="txtNumero" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="271" Background="#FF021E44" Foreground="White" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" FontFamily="Arial" />
+            </Border>
+        </StackPanel>
 
-            <Label Content="Nome:" FontSize="25" HorizontalAlignment="Left"/>
-            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black" Name="txtNome" Height="33">
-                <TextBox.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="20"/>
-                        <Setter Property="Padding" Value="6,0,6,0"/>
-                    </Style>
-                </TextBox.Resources>
-            </TextBox>
+        <WrapPanel HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="770">
+            <Label Content="" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="32"/>
 
-            <Label Content="CPF:" FontSize="25" HorizontalAlignment="Left" Height="40"/>
-            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black" Height="33" x:Name="txtCPF">
-                <TextBox.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="20"/>
-                        <Setter Property="Padding" Value="6,0,6,0"/>
-                    </Style>
-                </TextBox.Resources>
-            </TextBox>
+            <Image HorizontalAlignment="Left" Height="46" VerticalAlignment="Center" Width="64" Source="/Imagens/Captura de tela 2023-04-29 190942.png"/>
+            <Label Content="Restaurante Serve Bem" Foreground="#FF021E44" FontSize="18" FontFamily="Arial" Height="29" Width="399"/>
+        </WrapPanel>
 
-            <Label Content="Número:" FontSize="25" HorizontalAlignment="Left" Height="41"/>
-            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black" Height="30" x:Name="txtNumero">
-                <TextBox.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="20"/>
-                        <Setter Property="Padding" Value="6,0,6,0"/>
-                    </Style>
-                </TextBox.Resources>
-            </TextBox>
+        <WrapPanel HorizontalAlignment="Center" Height="53" Margin="0,340,0,0" VerticalAlignment="Top" Width="598">
 
-            <Label Content="Email:" FontSize="25" HorizontalAlignment="Left" Height="38"/>
-            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black" Height="32" x:Name="txtEmail">
-                <TextBox.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="20"/>
-                        <Setter Property="Padding" Value="6,0,6,0"/>
-                    </Style>
-                </TextBox.Resources>
-            </TextBox>
+            <Label Content="" HorizontalAlignment="Center" Height="42" VerticalAlignment="Top" Width="35"/>
+            <Button x:Name="btSalvar" Content="Salvar" Background="#FF029B3A" FontFamily="Arial" Height="51" Width="152" Foreground="White" FontSize="20" Click="btSalvar_Click"/>
+            <Label Content="" HorizontalAlignment="Center" Height="42" VerticalAlignment="Top" Width="35"/>
+            <Button x:Name="btExcluir" Content="Cancelar" Background="#FFFF1616" FontFamily="Arial" Height="51" Width="152" Foreground="White" FontSize="20"/>
+            <Label Content="" HorizontalAlignment="Center" Height="42" VerticalAlignment="Top" Width="35"/>
+            <Button x:Name="bt_consultar" Content="consultar" Width="147" Click="bt_consultar_Click"></Button>
+        </WrapPanel>
 
-            <Label Content="Cidade:" FontSize="25" HorizontalAlignment="Left"/>
-            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black" Height="35" x:Name="txtCidade">
-                <TextBox.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="20"/>
-                        <Setter Property="Padding" Value="6,0,6,0"/>
-                    </Style>
-                </TextBox.Resources>
-            </TextBox>
-
-            <Label Content="Endereço:" FontSize="25" HorizontalAlignment="Left"/>
-            <TextBox FontSize="25" BorderThickness="3" BorderBrush="Black" Height="32" x:Name="txtEndereco">
-                <TextBox.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="20"/>
-                        <Setter Property="Padding" Value="6,0,6,0"/>
-                    </Style>
-                </TextBox.Resources>
-            </TextBox>
-
-            <DockPanel Grid.Column="1" Margin="0,15,0,8" Width="632">
-
-                <Button Content="Salvar" FontSize="25" MinWidth="190" Width="Auto" Margin="0,0,10,0" Click="Button_Click">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"></Setter>
-                        </Style>
-                    </Button.Resources>
-                </Button>
-
-                <Button Content="Cancelar" FontSize="25" MinWidth="200" Width="Auto" Margin="10,0,0,0">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"></Setter>
-                        </Style>
-                    </Button.Resources>
-                </Button>
-
-                <Button Content="Consultar" FontSize="25" MinWidth="200" Width="Auto" Margin="10,0,0,0" Click="Button_Click">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"></Setter>
-                        </Style>
-                    </Button.Resources>
-                </Button>
-
-            </DockPanel>
-
+        <StackPanel HorizontalAlignment="Right" Height="199" Margin="0,83,80,0" VerticalAlignment="Top" Width="278">
+            <Label Content="Email:" Height="33" Width="275" FontSize="16" Foreground="#FF021E44"/>
+            <Border BorderBrush="#FF021E44" BorderThickness="5" Height="30" Width="271" CornerRadius="10">
+                <TextBox x:Name="txtEmail" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="271" Background="#FF021E44" Foreground="White" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" FontFamily="Arial" />
+            </Border>
+            <Label Content="" Height="58"/>
+            <Label Content="Cidade:" Height="33" Width="274" FontSize="16" Foreground="#FF021E44"/>
+            <Border BorderBrush="#FF021E44" BorderThickness="5" Height="30" Width="271" CornerRadius="10">
+                <TextBox x:Name="txtCidade" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="271" Background="#FF021E44" Foreground="White" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" FontFamily="Arial" />
+            </Border>
         </StackPanel>
 
     </Grid>

@@ -32,7 +32,7 @@ namespace SisServeBem
             form.ShowDialog();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
             try
             {

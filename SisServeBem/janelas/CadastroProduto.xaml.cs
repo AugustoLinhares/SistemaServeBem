@@ -33,25 +33,7 @@ namespace SisServeBem
 
         private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                var pro = new Produto();
 
-                pro.Nome = txtNome.Text;
-                pro.ValorVenda = Convert.ToDouble(txtPrecoVenda.Text);
-                pro.ValorCusto = Convert.ToDouble(txtPrecoCusto.Text);
-                pro.Marca= txtMarca.Text;
-                pro.Tipo = txtCategoria.Text;
-                pro.Estoque = null;
-
-                var proDAO = new ProdutoDAO();
-                proDAO.Insert(pro);
-                MessageBox.Show("Salvo com sucesso!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
     }
 }
