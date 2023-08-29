@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SisServeBem.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,31 @@ namespace SisServeBem
     /// </summary>
     public partial class ConsultarCliente : Window
     {
+
         public ConsultarCliente()
         {
             InitializeComponent();
+            Loaded += ConsultarCliente_Loaded;
+        }
+
+        private void ConsultarCliente_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarDados();
+        }
+
+        private void CarregarDados()
+        {
+            try
+            {
+                var clienteDAO = new ClienteDAO();
+                DataGridCliente.ItemSource = clienteDAO.List();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -29,6 +52,14 @@ namespace SisServeBem
             // bt seta
             var form = new CadastroCliente();
             form.ShowDialog();
+        }
+
+        private void btEditar_Click(object sender, RoutedEventArgs e)
+        {
+            var clienteSelecionado = dataGridCliente.SelectedItem as Cliente;
+            var tela = new CadastroCliente(clienteSelecionado.Id);
+            tela.ShowDialog();
+            CarregarDados();
         }
     }
 }
