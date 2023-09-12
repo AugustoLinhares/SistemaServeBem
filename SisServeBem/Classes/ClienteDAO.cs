@@ -1,4 +1,6 @@
-﻿using Org.BouncyCastle.Crypto.Tls;
+﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI;
+using Org.BouncyCastle.Crypto.Tls;
 using SisServeBem.ConexaoBanco;
 using SisServeBem.Interface;
 using System;
@@ -88,8 +90,40 @@ namespace SisServeBem.Classes
 
         public List<Cliente> List()
         {
-            throw new NotImplementedException();
-            
+            try
+            {
+                List<Cliente> list = new List<Cliente>();
+
+                var query = conexao.Query();
+                query.CommandText = "SELECT * FROM cliente";
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    list.Add(new Cliente()
+                    {
+                        //Id = reader.GetInt32("id_cli"),
+                        //Nome = DAOHelper.GetString(reader, "nome_cli"),
+                        //Email = DAOHelper.GetString(reader, "email_cli"),
+                        //CPF = DAOHelper.GetString(reader, "cpf_cli"),
+                        //Numero = DAOHelper.GetString(reader, "numero_cli"),
+                        //Cidade = DAOHelper.GetString(reader, "cidade_cli"),
+                        //Endereco = DAOHelper.GetString(reader, "endereco_cli")
+                                            
+                    });
+                }
+
+                return list;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conexao.Close();
+            }
         }
 
         public void Update(Cliente t)

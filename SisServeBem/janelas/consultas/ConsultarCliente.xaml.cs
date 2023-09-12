@@ -37,7 +37,7 @@ namespace SisServeBem
             try
             {
                 var clienteDAO = new ClienteDAO();
-                DataGridCliente.ItemSource = clienteDAO.List();
+                dataGridCliente.ItemsSource = clienteDAO.List();
 
             }
             catch (Exception ex)
@@ -50,6 +50,7 @@ namespace SisServeBem
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // bt seta
+           
             var form = new CadastroCliente();
             form.ShowDialog();
         }
