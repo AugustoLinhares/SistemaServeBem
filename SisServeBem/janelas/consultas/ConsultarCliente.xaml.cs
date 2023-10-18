@@ -50,7 +50,7 @@ namespace SisServeBem
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // bt seta
-           
+
             var form = new CadastroCliente();
             form.ShowDialog();
         }
@@ -61,6 +61,29 @@ namespace SisServeBem
             var tela = new CadastroCliente(clienteSelecionado.Id);
             tela.ShowDialog();
             CarregarDados();
+        }
+
+        private void btDeletar_Click(object sender, RoutedEventArgs e)
+        {
+            var clienteSelecionado = dataGridCliente.SelectedItem as Cliente;
+
+            var result = MessageBox.Show($"Deseja realmente remover o Cliente `{clienteSelecionado.Nome}`?", "Confirmação de Exclusão",
+                MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (result == MessageBoxResult.Yes)
+                {
+                    var dao = new ClienteDAO();
+                    dao.Delete(clienteSelecionado);
+                    CarregarDados();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
         }
     }
 }

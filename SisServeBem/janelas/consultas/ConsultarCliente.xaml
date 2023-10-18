@@ -21,7 +21,7 @@
         </StackPanel>
 
         <WrapPanel HorizontalAlignment="Left" Height="59" Margin="236,349,0,0" VerticalAlignment="Top" Width="360">
-            <Button  x:Name="btExcluir" Foreground="White" FontSize="20" Content="Excluir" Background="#FFFF1616" FontFamily="Arial"  Height="51" Width="152"></Button>
+            <Button  x:Name="btExcluir" Foreground="White" FontSize="20" Content="Excluir" Background="#FFFF1616" FontFamily="Arial"  Height="51" Width="152" Click="btDeletar_Click"></Button>
             <Label Content="" HorizontalAlignment="Center" Height="42" VerticalAlignment="Top" Width="35"/>
             <Button  x:Name="btEditar" Content="Editar" Foreground="White" FontSize="20" Background="#FFA44DFF" FontFamily="Arial" Height="51" Width="152" Click="btEditar_Click"></Button>
         </WrapPanel>
