@@ -41,7 +41,7 @@
             <Label Content="" HorizontalAlignment="Center" Height="42" VerticalAlignment="Top" Width="35"/>
             <Button x:Name="btExcluir" Content="Cancelar" Background="#FFFF1616" FontFamily="Arial" Height="51" Width="152" Foreground="White" FontSize="20" Click="btExcluir_Click"/>
             <Label Content="" HorizontalAlignment="Center" Height="42" VerticalAlignment="Top" Width="35"/>
-            <Button x:Name="bt_consultar" Content="consultar" Width="149" Height="45" Click="Button_Click"/>
+            <Button x:Name="bt_consultar" Content="Consultar" Width="149" Height="45" Click="Button_Click" Background="#FFFFA142" FontFamily="Arial" Foreground="white"  FontSize="20"/>
         </WrapPanel>
         <StackPanel HorizontalAlignment="Left" Height="208" Margin="568,157,0,0" VerticalAlignment="Top" Width="274">
             <Label Content="CPF:"  Height="33" Width="275" FontSize="16" Foreground="#FF021E44"/>

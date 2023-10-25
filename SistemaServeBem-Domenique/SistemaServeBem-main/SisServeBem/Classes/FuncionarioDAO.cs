@@ -1,6 +1,4 @@
 ﻿using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI;
-using Org.BouncyCastle.Crypto.Tls;
 using SisServeBem.ConexaoBanco;
 using SisServeBem.Interface;
 using System;
@@ -11,20 +9,19 @@ using System.Threading.Tasks;
 
 namespace SisServeBem.Classes
 {
-    class ClienteDAO : IDAO<Cliente>
+    internal class FuncionarioDAO : IDAO<Funcionario>
     {
         private Conexao conexao;
-        public ClienteDAO()
+        public FuncionarioDAO()
         {
             conexao = new Conexao();
         }
-
-        public void Delete(Cliente t)
+        public void Delete(Funcionario t)
         {
             try
             {
                 var query = conexao.Query();
-                query.CommandText = "DELETE FROM cliente WHERE id_cli = @id";
+                query.CommandText = "DELETE FROM funcionario WHERE id_fun = @id";
 
                 query.Parameters.AddWithValue("@id", t.Id);
 
@@ -44,53 +41,51 @@ namespace SisServeBem.Classes
             }
         }
 
-        public Cliente GetById(int id)
+        public Funcionario GetById(int id)
         {
             try
             {
                 var query = conexao.Query();
-                query.CommandText = "SELECT * FROM cliente WHERE id_cli = @id";
+                query.CommandText = "SELECT * FROM funcionario WHERE id_cli = @id";
 
                 query.Parameters.AddWithValue("id", id);
 
                 var resultado = query.ExecuteReader();
 
-                var cliente = new Cliente();
+                var funcionario = new Funcionario();
 
                 while (resultado.Read())
                 {
-                    cliente.Id = resultado.GetInt32("id_cli");
-                    cliente.Nome = resultado.GetString("nome_cli");
-                    cliente.Email = resultado.GetString("email_cli");
-                    cliente.CPF = resultado.GetString("cpf_cli");
-                    cliente.Numero = resultado.GetString("numero_cli");
-                    cliente.Cidade = resultado.GetString("cidade_cli");
-                    cliente.Endereco = resultado.GetString("endereco_cli");
+                    funcionario.Id = resultado.GetInt32("id_cli");
+                    funcionario.Nome = resultado.GetString("nome_cli");
+                    funcionario.CPF = resultado.GetString("cpf_cli");
+                    funcionario.Funcao = resultado.GetString("funcao_cli");
+                    funcionario.Cidade = resultado.GetString("cidade_cli");
+                    funcionario.UF = resultado.GetString("uf_cli");
                 }
 
-                return cliente;
+                return funcionario;
 
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw ex;
             }
-
         }
 
-        public void Insert(Cliente t)
+        public void Insert(Funcionario t)
         {
             try
             {
                 var query = conexao.Query();
-                query.CommandText = "INSERT INTO cliente (nome_cli, cpf_cli, numero_cli, email_cli, cidade_cli, endereco_cli) " +
-                    "VALUES (@nome, @cpf, @numero, @email, @cidade, @endereco)";
+                query.CommandText = "INSERT INTO Funcionario (nome_fun, cpf_fun, funcao_fun, cidade_fun, uf_fun) " +
+                    "VALUES (@nome, @cpf, @funcao, @cidade, @uf)";
 
                 query.Parameters.AddWithValue("@nome", t.Nome);
                 query.Parameters.AddWithValue("@cpf", t.CPF);
-                query.Parameters.AddWithValue("@numero", t.Numero);
-                query.Parameters.AddWithValue("@email", t.Email);
+                query.Parameters.AddWithValue("@funcao", t.Funcao);
                 query.Parameters.AddWithValue("@cidade", t.Cidade);
-                query.Parameters.AddWithValue("@endereco", t.Endereco);
+                query.Parameters.AddWithValue("@uf", t.UF);
 
                 var result = query.ExecuteNonQuery();
 
@@ -98,9 +93,9 @@ namespace SisServeBem.Classes
                     throw new Exception("Erro ao realizar o cadastro");
 
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw ex;
+                throw e;
             }
             finally
             {
@@ -108,29 +103,28 @@ namespace SisServeBem.Classes
             }
         }
 
-        public List<Cliente> List()
+        public List<Funcionario> List()
         {
             try
             {
-                List<Cliente> list = new List<Cliente>();
+                List<Funcionario> list = new List<Funcionario>();
 
                 var query = conexao.Query();
-                query.CommandText = "SELECT * FROM cliente";
+                query.CommandText = "SELECT * FROM funcionario";
 
                 MySqlDataReader reader = query.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    list.Add(new Cliente()
+                    list.Add(new Funcionario()
                     {
-                        //Id = reader.GetInt32("id_cli"),
-                        //Nome = DAOHelper.GetString(reader, "nome_cli"),
-                        //Email = DAOHelper.GetString(reader, "email_cli"),
-                        //CPF = DAOHelper.GetString(reader, "cpf_cli"),
-                        //Numero = DAOHelper.GetString(reader, "numero_cli"),
-                        //Cidade = DAOHelper.GetString(reader, "cidade_cli"),
-                        //Endereco = DAOHelper.GetString(reader, "endereco_cli")
-                                            
+                        //Id = reader.GetInt32("id_fun"),
+                        //Nome = DAOHelper.GetString(reader, "nome_fun"),
+                        //CPF = DAOHelper.GetString(reader, "cpf_fun"),
+                        //Funcao = DAOHelper.GetString(reader, "funcao_fun"),
+                        //Cidade = DAOHelper.GetString(reader, "cidade_fun"),
+                        //UF = DAOHelper.GetString(reader, "uf_fun")
+
                     });
                 }
 
@@ -146,31 +140,30 @@ namespace SisServeBem.Classes
             }
         }
 
-        public void Update(Cliente t)
+        public void Update(Funcionario t)
         {
             try
             {
                 var query = conexao.Query();
-                query.CommandText = "UPDATE cliente SET nome_cli = @nome_cli, cpf_cli = @cpf_cli, numero_cli = @numero_cli, email_cli = @email_cli, cidade_cli = @cidade_cli, endereco_cli = @endereco_cli)";
-               
+                query.CommandText = "UPDATE funcionario SET nome_fun = @nome_fun, cpf_fun = @cpf_fun, funcao_fun = @funcao_fun, cidade_fun = @cidade_fun, uf_fun = @uf_fun";
+
                 query.Parameters.AddWithValue("@nome", t.Nome);
                 query.Parameters.AddWithValue("@cpf", t.CPF);
-                query.Parameters.AddWithValue("@numero", t.Numero);
-                query.Parameters.AddWithValue("@email", t.Email);
+                query.Parameters.AddWithValue("@funcao", t.Funcao);
                 query.Parameters.AddWithValue("@cidade", t.Cidade);
-                query.Parameters.AddWithValue("@endereco", t.Endereco);
-                    
+                query.Parameters.AddWithValue("@UF", t.UF);
+
                 query.Parameters.AddWithValue("@Id", t.Id);
-       
+
                 var result = query.ExecuteNonQuery();
 
                 if (result == 0)
                     throw new Exception("Erro ao realizar o cadastro");
 
             }
-            catch (Exception ex) 
-            { 
-              throw ex; 
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
     }

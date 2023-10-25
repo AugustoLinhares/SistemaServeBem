@@ -46,7 +46,7 @@
             <Label Content="" HorizontalAlignment="Center" Height="42" VerticalAlignment="Top" Width="35"/>
             <Button x:Name="btExcluir" Content="Cancelar" Background="#FFFF1616" FontFamily="Arial" Height="51" Width="152" Foreground="White" FontSize="20"/>
             <Label Content="" HorizontalAlignment="Center" Height="42" VerticalAlignment="Top" Width="35"/>
-            <Button x:Name="bt_consultar" Content="consultar" Width="147" Click="bt_consultar_Click"></Button>
+            <Button x:Name="bt_consultar" Content="consultar" Width="147" Click="bt_consultar_Click"  Background="#FFFFA142" FontFamily="Arial" Foreground="white"  FontSize="20"></Button>
         </WrapPanel>
 
         <StackPanel HorizontalAlignment="Right" Height="199" Margin="0,83,80,0" VerticalAlignment="Top" Width="278">

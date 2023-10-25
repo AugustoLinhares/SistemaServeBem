@@ -47,7 +47,7 @@
             <Label Content="" HorizontalAlignment="Center" Height="42" VerticalAlignment="Top" Width="35"/>
             <Button x:Name="btExcluir" Content="Cancelar" Background="#FFFF1616" FontFamily="Arial" Height="51" Width="152" Foreground="White" FontSize="20" Click="btExcluir_Click"/>
             <Label Content="" HorizontalAlignment="Center" Height="42" VerticalAlignment="Top" Width="35"/>
-            <Button x:Name="bt_consultar" Content="consultar" Width="141" Click="Button_Click"></Button>
+            <Button x:Name="bt_consultar" Content="consultar" Width="141" Click="Button_Click"  Background="#FFFFA142" FontFamily="Arial" Foreground="white"  FontSize="20"></Button>
         </WrapPanel>
         <Image HorizontalAlignment="Left" Height="78" Margin="0,60,0,0" VerticalAlignment="Top" Width="140" Source="/Imagens/cadastro de funcionario (10) (1).png"/>
 
