@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SisServeBem.helpers;
 
 namespace SisServeBem.Classes
 {
@@ -123,14 +124,14 @@ namespace SisServeBem.Classes
                 {
                     list.Add(new Cliente()
                     {
-                        //Id = reader.GetInt32("id_cli"),
-                        //Nome = DAOHelper.GetString(reader, "nome_cli"),
-                        //Email = DAOHelper.GetString(reader, "email_cli"),
-                        //CPF = DAOHelper.GetString(reader, "cpf_cli"),
-                        //Numero = DAOHelper.GetString(reader, "numero_cli"),
-                        //Cidade = DAOHelper.GetString(reader, "cidade_cli"),
-                        //Endereco = DAOHelper.GetString(reader, "endereco_cli")
-                                            
+                        Id = reader.GetInt32("id_cli"),
+                        Nome = DAOHelper.GetString(reader, "nome_cli"),
+                        Email = DAOHelper.GetString(reader, "email_cli"),
+                        CPF = DAOHelper.GetString(reader, "cpf_cli"),
+                        Numero = DAOHelper.GetString(reader, "numero_cli"),
+                        Cidade = DAOHelper.GetString(reader, "cidade_cli"),
+                        Endereco = DAOHelper.GetString(reader, "endereco_cli")
+
                     });
                 }
 
