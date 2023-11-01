@@ -12,16 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace TelaFornecedor
+namespace SisServeBem
 {
     /// <summary>
-    /// Lógica interna para CadastroFuncionario.xaml
+    /// Lógica interna para ConsultarFornecedor.xaml
     /// </summary>
-    public partial class CadastroProduto : Window
+    public partial class ConsultarFornecedor : Window
     {
-        public CadastroProduto()
+        public ConsultarFornecedor()
         {
             InitializeComponent();
+        }
+
+        private void btCancelar_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
