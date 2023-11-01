@@ -41,7 +41,7 @@ namespace SisServeBem
 
             try
             {
-                //comboBoxEstado.ItemsSource = Estado.List();
+               // comboBoxEstado.ItemsSource = Estado.List();
 
                 if (_cliente.Id > 0)
                 {

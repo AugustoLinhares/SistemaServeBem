@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using SisServeBem.ConexaoBanco;
+using SisServeBem.helpers;
 using SisServeBem.Interface;
 using System;
 using System.Collections.Generic;
@@ -9,19 +10,20 @@ using System.Threading.Tasks;
 
 namespace SisServeBem.Classes
 {
-    internal class FuncionarioDAO : IDAO<Funcionario>
+    class ProdutoDAO : IDAO<Produto>
     {
         private Conexao conexao;
-        public FuncionarioDAO()
+        public ProdutoDAO()
         {
             conexao = new Conexao();
         }
-        public void Delete(Funcionario t)
+
+        public void Delete(Produto t)
         {
             try
             {
                 var query = conexao.Query();
-                query.CommandText = "DELETE FROM funcionario WHERE id_fun = @id";
+                query.CommandText = "DELETE FROM produto WHERE id_pro = @id";
 
                 query.Parameters.AddWithValue("@id", t.Id);
 
@@ -41,30 +43,30 @@ namespace SisServeBem.Classes
             }
         }
 
-        public Funcionario GetById(int id)
+        public Produto GetById(int id)
         {
             try
             {
                 var query = conexao.Query();
-                query.CommandText = "SELECT * FROM funcionario WHERE id_cli = @id";
+                query.CommandText = "SELECT * FROM produto WHERE id_pro = @id";
 
                 query.Parameters.AddWithValue("id", id);
 
                 var resultado = query.ExecuteReader();
 
-                var funcionario = new Funcionario();
+                var produto = new Produto();
 
                 while (resultado.Read())
                 {
-                    funcionario.Id = resultado.GetInt32("id_cli");
-                    funcionario.Nome = resultado.GetString("nome_cli");
-                    funcionario.CPF = resultado.GetString("cpf_cli");
-                    funcionario.Funcao = resultado.GetString("funcao_cli");
-                    funcionario.Cidade = resultado.GetString("cidade_cli");
-                    funcionario.UF = resultado.GetString("uf_cli");
+                    produto.Id = resultado.GetInt32("id_pro");
+                    produto.Nome = resultado.GetString("nome_pro");
+                    produto.ValorVenda = resultado.GetDouble("valor_venda_pro");
+                    produto.ValorCusto = resultado.GetDouble("valor_custo_pro");
+                    produto.Marca = resultado.GetString("marca_pro");
+                    produto.Tipo = resultado.GetString("tipo_pro");
                 }
 
-                return funcionario;
+                return produto;
 
             }
             catch (Exception ex)
@@ -73,19 +75,19 @@ namespace SisServeBem.Classes
             }
         }
 
-        public void Insert(Funcionario t)
+        public void Insert(Produto t)
         {
             try
             {
                 var query = conexao.Query();
-                query.CommandText = "INSERT INTO Funcionario (nome_fun, cpf_fun, funcao_fun, cidade_fun, uf_fun) " +
-                    "VALUES (@nome, @cpf, @funcao, @cidade, @uf)";
+                query.CommandText = "INSERT INTO Produto (nome_pro, valor_venda_pro, valor_custo_pro, marca_pro, tipo_pro) " +
+                    "VALUES (@nome, @valorvenda, @valorcusto, @marca, @tipo)";
 
                 query.Parameters.AddWithValue("@nome", t.Nome);
-                query.Parameters.AddWithValue("@cpf", t.CPF);
-                query.Parameters.AddWithValue("@funcao", t.Funcao);
-                query.Parameters.AddWithValue("@cidade", t.Cidade);
-                query.Parameters.AddWithValue("@uf", t.UF);
+                query.Parameters.AddWithValue("@valorvenda", t.ValorVenda);
+                query.Parameters.AddWithValue("@valorcusto", t.ValorCusto);
+                query.Parameters.AddWithValue("@marca", t.Marca);
+                query.Parameters.AddWithValue("@tipo", t.Tipo);
 
                 var result = query.ExecuteNonQuery();
 
@@ -103,27 +105,27 @@ namespace SisServeBem.Classes
             }
         }
 
-        public List<Funcionario> List()
+        public List<Produto> List()
         {
             try
             {
-                List<Funcionario> list = new List<Funcionario>();
+                List<Produto> list = new List<Produto>();
 
                 var query = conexao.Query();
-                query.CommandText = "SELECT * FROM funcionario";
+                query.CommandText = "SELECT * FROM produto";
 
                 MySqlDataReader reader = query.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    list.Add(new Funcionario()
+                    list.Add(new Produto()
                     {
-                        //Id = reader.GetInt32("id_fun"),
-                        //Nome = DAOHelper.GetString(reader, "nome_fun"),
-                        //CPF = DAOHelper.GetString(reader, "cpf_fun"),
-                        //Funcao = DAOHelper.GetString(reader, "funcao_fun"),
-                        //Cidade = DAOHelper.GetString(reader, "cidade_fun"),
-                        //UF = DAOHelper.GetString(reader, "uf_fun")
+                        Id = reader.GetInt32("id_pro"),
+                        Nome = DAOHelper.GetString(reader, "nome_pro"),
+                        ValorVenda = DAOHelper.GetDouble(reader, "valor_venda_pro"),
+                        ValorCusto = DAOHelper.GetDouble(reader, "valor_custo_pro"),
+                        Marca = DAOHelper.GetString(reader, "marca_pro"),
+                        Tipo = DAOHelper.GetString(reader, "tipo_pro")
 
                     });
                 }
@@ -140,18 +142,18 @@ namespace SisServeBem.Classes
             }
         }
 
-        public void Update(Funcionario t)
+        public void Update(Produto t)
         {
             try
             {
                 var query = conexao.Query();
-                query.CommandText = "UPDATE funcionario SET nome_fun = @nome_fun, cpf_fun = @cpf_fun, funcao_fun = @funcao_fun, cidade_fun = @cidade_fun, uf_fun = @uf_fun";
+                query.CommandText = "UPDATE produto SET nome_pro = @nome_pro, valor_venda_pro = @valor_venda_pro, valor_custo_pro = @valor_custo_pro, marca_pro = @marca_pro, tipo_pro = @tipo_pro";
 
                 query.Parameters.AddWithValue("@nome", t.Nome);
-                query.Parameters.AddWithValue("@cpf", t.CPF);
-                query.Parameters.AddWithValue("@funcao", t.Funcao);
-                query.Parameters.AddWithValue("@cidade", t.Cidade);
-                query.Parameters.AddWithValue("@UF", t.UF);
+                query.Parameters.AddWithValue("@valorvenda", t.ValorVenda);
+                query.Parameters.AddWithValue("@valorcusto", t.ValorCusto);
+                query.Parameters.AddWithValue("@marca", t.Marca);
+                query.Parameters.AddWithValue("@tipo", t.Tipo);
 
                 query.Parameters.AddWithValue("@Id", t.Id);
 
