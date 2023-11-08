@@ -10,20 +10,14 @@ email_cli VARCHAR(45) ,
 cidade_cli VARCHAR(45) ,
 endereco_cli VARCHAR(45)
 );
-CREATE TABLE Estoque (
-  id_est int primary key auto_increment not null,
-  qtd_est INT,
-  data_validade_est DATE
-  );
+
   CREATE TABLE Produto(
   id_pro int primary key auto_increment not null,
   nome_pro VARCHAR(45),
   valor_venda_pro DOUBLE,
   valor_custo_pro double,
   marca_pro VARCHAR(45),
-  tipo_pro VARCHAR(45), # = categoria
-  id_est_fk INT,
- FOREIGN KEY (id_est_fk) REFERENCES Estoque (id_est)
+  tipo_pro VARCHAR(45) # = categoria
 );
 CREATE TABLE Funcionario(
   id_fun int primary key auto_increment not null,
@@ -115,7 +109,7 @@ CREATE TABLE Prato(
   id_ven_fk INT,
   id_ped_fk INT,
     FOREIGN KEY (id_ven_fk) REFERENCES Venda (id_ven),
-    FOREIGN KEY (id_ped_fk) REFERENCES Pedido (id_ped_fk)
+    FOREIGN KEY (id_ped_fk) REFERENCES Pedido (id_ped)
 );
 CREATE TABLE Pedido_Produto(
   id_ped_Pro int primary key auto_increment not null,
@@ -159,29 +153,17 @@ INSERT INTO cliente VALUES
 (null,'Beatriz Rodrigues', '888.999.000-11', '(83) 3610-7306', 'beatriz@email.com', 'Porto Alegre', 'Avenida Desembargador Moreira'),
 (null,'Thiago Nunes', '444.333.222-11', '(62) 2191-8836', 'thiago@email.com', 'São Paulo', 'Avenida São João');
 
-INSERT INTO Estoque VALUES 
-(null, 100, '2023-07-15'),
-(null, 50, '2023-09-30'),
-(null, 200, '2023-06-25'),
-(null, 75, '2023-08-12'),
-(null, 300, '2023-07-01'),
-(null, 150, '2023-09-15'),
-(null, 80, '2023-08-20'),
-(null, 250, '2023-06-30'),
-(null, 120, '2023-07-10'),
-(null, 180, '2023-09-05');
-
 INSERT INTO Produto VALUES 
-(null, 'Produto A', 10.99, '9.99', 'Marca A', 'Tipo A', 1),
-(null, 'Produto B', 19.99, '15.99', 'Marca B', 'Tipo B', 2),
-(null, 'Produto C', 5.99, '3.99', 'Marca C', 'Tipo A', 3),
-(null, 'Produto D', 15.99, '11.99', 'Marca A', 'Tipo C', 4),
-(null, 'Produto E', 12.49, '10.99', 'Marca B', 'Tipo A', 5),
-(null, 'Produto F', 8.99, '4.99', 'Marca C', 'Tipo B', 6),
-(null, 'Produto G', 14.99, '10.99', 'Marca A', 'Tipo B', 7),
-(null, 'Produto H', 9.99, '6.99', 'Marca B', 'Tipo C', 8),
-(null, 'Produto I', 7.49, '5.99', 'Marca C', 'Tipo A', 9),
-(null, 'Produto J', 11.99, '10.99', 'Marca A', 'Tipo C', 10);
+(null, 'Produto A', 10.99, '9.99', 'Marca A', 'Tipo A'),
+(null, 'Produto B', 19.99, '15.99', 'Marca B', 'Tipo B'),
+(null, 'Produto C', 5.99, '3.99', 'Marca C', 'Tipo A'),
+(null, 'Produto D', 15.99, '11.99', 'Marca A', 'Tipo C'),
+(null, 'Produto E', 12.49, '10.99', 'Marca B', 'Tipo A'),
+(null, 'Produto F', 8.99, '4.99', 'Marca C', 'Tipo B'),
+(null, 'Produto G', 14.99, '10.99', 'Marca A', 'Tipo B'),
+(null, 'Produto H', 9.99, '6.99', 'Marca B', 'Tipo C'),
+(null, 'Produto I', 7.49, '5.99', 'Marca C', 'Tipo A'),
+(null, 'Produto J', 11.99, '10.99', 'Marca A', 'Tipo C');
 
 INSERT INTO Funcionario VALUES 
 (null, 'João Silva', '111.222.333-44', 'Vendedor', 'São Paulo', 'SP'),
@@ -254,7 +236,7 @@ INSERT INTO Compra VALUES
 (null, '2023-06-08', 80.25, 1, 8, 8, 8),
 (null, '2023-06-09', 175.00, 1, 9, 9, 9),
 (null, '2023-06-10', 130.75, 1, 10, 10, 10);
-
+select*from produto;
 INSERT INTO Venda VALUES 
 (null, '2023-06-01', 80.00, 1, 1, 1),
 (null, '2023-06-02', 65.50, 2, 2, 2),

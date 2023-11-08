@@ -69,20 +69,10 @@
             </Button>
             <Label Content="Funcionário" FontFamily="Arial" FontSize="20" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
 
-            <Button Style="{StaticResource ButtonMenu}" Grid.Column="1" Grid.Row="0" x:Name="btFinanceiro" Background="transparent" BorderThickness="0" Cursor="Hand" Click="btFinanceiro_Click" >
-                <Image Source="/Imagens/financeiro.png" Width="96" />
-            </Button>
-            <Label Content="Financeiro" FontFamily="Arial" FontSize="20" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-
             <Button Style="{StaticResource ButtonMenu}" Grid.Column="2" Grid.Row="0" x:Name="btFornecedor" Background="transparent" BorderThickness="0" Cursor="Hand" Click="btFornecedor_Click" >
                 <Image Source="/Imagens/fornecedor.png" Width="96" />
             </Button>
             <Label Content="Fornecedor" FontFamily="Arial" FontSize="20" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-
-            <Button Style="{StaticResource ButtonMenu}" Grid.Column="3" Grid.Row="0" x:Name="btEstoque" Background="transparent" BorderThickness="0" Cursor="Hand" Click="btEstoque_Click" >
-                <Image Source="/Imagens/estoque.png" Width="96" />
-            </Button>
-            <Label Content="Estoque" FontFamily="Arial" FontSize="20" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
 
             <Button Style="{StaticResource ButtonMenu}" Grid.Column="0" Grid.Row="1" x:Name="btVendas" Background="transparent" BorderThickness="0" Cursor="Hand" Click="btVendas_Click" >
                 <Image Source="/Imagens/vendas.png" Width="96" />

@@ -12,21 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace SisServeBem
+namespace SisServeBem.janelas
 {
     /// <summary>
-    /// Lógica interna para ConsultarFornecedor.xaml
+    /// Lógica interna para cadastroEstoque.xaml
     /// </summary>
-    public partial class ConsultarFornecedor : Window
+    public partial class cadastroEstoque : Window
     {
-        public ConsultarFornecedor()
+        public cadastroEstoque()
         {
             InitializeComponent();
-        }
-
-        private void btCancelar_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

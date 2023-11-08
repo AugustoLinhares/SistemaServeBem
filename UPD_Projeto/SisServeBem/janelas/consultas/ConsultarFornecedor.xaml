@@ -16,7 +16,7 @@
         <Image HorizontalAlignment="Left" Height="61" Margin="0,53,0,0" VerticalAlignment="Top" Width="116" Source="/Imagens/cadastro de funcionario (10) (1).png"/>
 
         <StackPanel Margin="108,82,76,130">
-            <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Height="259" Width="586"/>
+            <DataGrid x:Name="DataGridFornecedor" d:ItemsSource="{d:SampleData ItemCount=5}" Height="259" Width="586"/>
         </StackPanel>
 
         <WrapPanel HorizontalAlignment="Left" Height="60" Margin="250,329,0,0" VerticalAlignment="Top" Width="346">

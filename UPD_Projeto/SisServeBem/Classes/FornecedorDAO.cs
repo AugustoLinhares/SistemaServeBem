@@ -1,4 +1,6 @@
-﻿using SisServeBem.ConexaoBanco;
+﻿using MySql.Data.MySqlClient;
+using SisServeBem.ConexaoBanco;
+using SisServeBem.helpers;
 using SisServeBem.Interface;
 using System;
 using System.Collections.Generic;
@@ -57,7 +59,38 @@ namespace SisServeBem.Classes
 
         public List<Fornecedor> List()
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Fornecedor> list = new List<Fornecedor>();
+
+                var query = conexao.Query();
+                query.CommandText = "SELECT * FROM Fornecedor";
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    list.Add(new Fornecedor()
+                    {
+                        Id = reader.GetInt32("id_for"),
+                        RazaoSocial = DAOHelper.GetString(reader, "razao_social_for"),
+                        CNPJ = DAOHelper.GetString(reader, "cnpj_for"),
+                        NomeFantasia = DAOHelper.GetString(reader, "nome_fantasia_for"),
+                        Contato = DAOHelper.GetString(reader, "contato_for" +
+                        ""),
+                    });
+                }
+
+                return list;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conexao.Close();
+            }
         }
 
         public void Update(Fornecedor t)

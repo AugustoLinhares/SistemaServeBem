@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SisServeBem.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,27 @@ namespace SisServeBem
         public ConsultarFuncionario()
         {
             InitializeComponent();
+            Loaded += ConsultarFuncionario_Loaded;
+        }
+
+        private void ConsultarFuncionario_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarDados();
+        }
+
+        private void CarregarDados()
+        {
+            try
+            {
+                var clienteDAO = new ClienteDAO();
+                DataGridFuncionario.ItemsSource = clienteDAO.List();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

@@ -147,7 +147,8 @@ namespace SisServeBem.Classes
             try
             {
                 var query = conexao.Query();
-                query.CommandText = "UPDATE produto SET nome_pro = @nome_pro, valor_venda_pro = @valor_venda_pro, valor_custo_pro = @valor_custo_pro, marca_pro = @marca_pro, tipo_pro = @tipo_pro";
+                query.CommandText = "UPDATE produto SET nome_pro = @nome_pro, valor_venda_pro = @valor_venda_pro, valor_custo_pro = @valor_custo_pro, " +
+                "marca_pro = @marca_pro, tipo_pro = @tipo_pro";
 
                 query.Parameters.AddWithValue("@nome", t.Nome);
                 query.Parameters.AddWithValue("@valorvenda", t.ValorVenda);

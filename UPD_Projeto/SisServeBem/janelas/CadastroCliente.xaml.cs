@@ -89,22 +89,12 @@ namespace SisServeBem
                 {
                     clienteDAO.Insert(_cliente);
                     MessageBox.Show($"Cliente {_cliente.Nome} adicionado com sucesso!");
-                    MessageBox.Show($"Cliente {_cliente.Numero} adicionado com sucesso!");
-                    MessageBox.Show($"Cliente {_cliente.Email} adicionado com sucesso!");
-                    MessageBox.Show($"Cliente {_cliente.Endereco} adicionado com sucesso!");
-                    MessageBox.Show($"Cliente {_cliente.Cidade} adicionado com sucesso!");
-                    MessageBox.Show($"Cliente {_cliente.CPF} adicionado com sucesso!");
 
                 }
                 else
                 {
                     clienteDAO.Update(_cliente);
                     MessageBox.Show($"Cliente {_cliente.Nome} atualizado com sucesso!");
-                    MessageBox.Show($"Cliente {_cliente.Numero} atualizado com sucesso!");
-                    MessageBox.Show($"Cliente {_cliente.Email} atualizado com sucesso!");
-                    MessageBox.Show($"Cliente {_cliente.Endereco} atualizado com sucesso!");
-                    MessageBox.Show($"Cliente {_cliente.Cidade} atualizado com sucesso!");
-                    MessageBox.Show($"Cliente {_cliente.CPF} atualizado com sucesso!");
 
                 }
 
