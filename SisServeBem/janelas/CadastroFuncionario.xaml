@@ -9,10 +9,15 @@
         Title="CadastroFuncionario" Height="550" Width="1169">
     <Grid Margin="0,0,-57,0">
         <Image HorizontalAlignment="Left" Height="668" Margin="-3,10,0,0" VerticalAlignment="Top" Width="1457" Source="/Imagens/cadastro de funcionario (2) (1).png"/>
-        <StackPanel HorizontalAlignment="Left" Height="225" Margin="10,157,0,0" VerticalAlignment="Top" Width="370">
+        <StackPanel HorizontalAlignment="Left" Height="225" Margin="200,157,0,0" VerticalAlignment="Top" Width="370">
             <Label Content="Nome :" Height="33" Width="275" FontSize="16" Foreground="#FF021E44"/>
             <Border BorderBrush="#FF021E44" BorderThickness="5" Height="30" Width="271" CornerRadius="10">
                 <TextBox x:Name="txtNome" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" VerticalAlignment="Center" Width="271" Background="#FF021E44" Foreground="White" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" FontFamily="Arial" />
+            </Border>
+            <Label Content="" Height="58" Width="391"/>
+            <Label Content="UF:"  Height="33" Width="275" FontSize="16" Foreground="#FF021E44"></Label>
+            <Border BorderBrush="#FF021E44" BorderThickness="5" Height="30" Width="271" CornerRadius="10">
+                <TextBox x:Name="txtUf" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" VerticalAlignment="Center" Width="271" Background="#FF021E44" Foreground="White" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" FontFamily="Arial" />
             </Border>
         </StackPanel>
         <WrapPanel HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="770">
@@ -27,7 +32,7 @@
             <Label Content="" HorizontalAlignment="Center" Height="42" VerticalAlignment="Top" Width="35"/>
             <Button x:Name="bt_consultar" Content="Consultar" Width="149" Height="45" Click="Button_Click" Background="#FFFFA142" FontFamily="Arial" Foreground="white"  FontSize="20"/>
         </WrapPanel>
-        <StackPanel HorizontalAlignment="Center" Height="208" Margin="0,157,0,0" VerticalAlignment="Top" Width="374">
+        <StackPanel HorizontalAlignment="Center" Height="208" Margin="400,157,0,0" VerticalAlignment="Top" Width="374">
             <Label Content="CPF:"  Height="33" Width="275" FontSize="16" Foreground="#FF021E44"/>
             <Border BorderBrush="#FF021E44" BorderThickness="5" Height="30" Width="271" CornerRadius="10">
                 <TextBox x:Name="txtCpf" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" VerticalAlignment="Center" Width="271" Background="#FF021E44" Foreground="White" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" FontFamily="Arial" />
@@ -38,12 +43,7 @@
                 <TextBox x:Name="txtFuncao" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" VerticalAlignment="Center" Width="271" Background="#FF021E44" Foreground="White" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" FontFamily="Arial" />
             </Border>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="208" Margin="830,157,0,0" VerticalAlignment="Top" Width="304">
-            <Label Content="UF:"  Height="33" Width="275" FontSize="16" Foreground="#FF021E44"></Label>
-            <Border BorderBrush="#FF021E44" BorderThickness="5" Height="30" Width="271" CornerRadius="10">
-                <TextBox x:Name="txtUf" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" VerticalAlignment="Center" Width="271" Background="#FF021E44" Foreground="White" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" FontFamily="Arial" />
-            </Border>
-        </StackPanel>
+        
         <Image HorizontalAlignment="Left" Height="78" Margin="-3,60,0,0" VerticalAlignment="Top" Width="140" Source="/Imagens/cadastro de funcionario (10) (1).png"/>
     </Grid>
 </Window>

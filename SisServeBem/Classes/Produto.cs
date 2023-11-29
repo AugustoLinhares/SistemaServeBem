@@ -15,5 +15,19 @@ namespace SisServeBem.Classes
         public string Marca { get; set; }
         public string Tipo { get; set; }
         public Estoque Estoque { get; set; }
+
+        private bool _selected = false;
+
+        public bool IsSelected
+        {
+            get
+            {
+                return _selected;
+            }
+            set
+            {
+                _selected = value;
+            }
+        }
     }
 }

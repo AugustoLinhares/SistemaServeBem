@@ -14,5 +14,6 @@ namespace SisServeBem.Classes
         public Cliente Cliente { get; set; }
         public Pedido Pedido { get; set; }
         public Funcionario Funcionario { get; set; }
+        public List<VendaProduto> Itens { get; set; } = new List<VendaProduto>();
     }
 }

@@ -48,7 +48,8 @@ namespace SisServeBem.janelas
 
         private void btVendas_Click(object sender, RoutedEventArgs e)
         {
-
+            var vend = new TelaVendas();
+            vend.ShowDialog();
         }
 
         private void btRelatorio_Click(object sender, RoutedEventArgs e)

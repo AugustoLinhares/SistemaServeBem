@@ -75,8 +75,8 @@ namespace SisServeBem
             _produto.Marca = txtMarca.Text;
            // _produto.Estoque = txtEstoque.Text;
             _produto.Tipo = txtCategoria.Text;
-           // _produto.ValorCusto = txtPrecoCusto.Text;
-           // _produto.ValorVenda = txtPrecoVenda.Text;
+            _produto.ValorCusto = Convert.ToDouble(txtPrecoCusto.Text);
+            _produto.ValorVenda = Convert.ToDouble(txtPrecoVenda.Text);
 
             try
             {

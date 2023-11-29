@@ -1,0 +1,69 @@
+﻿<Window x:Class="SisServeBem.janelas.TelaVendas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SisServeBem.janelas"
+        mc:Ignorable="d"
+        Title="TelaVendas" Height="700" Width="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="94*"/>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="356*"/>
+            <RowDefinition Height="122*"/>
+        </Grid.RowDefinitions>
+        <WrapPanel HorizontalAlignment="Left" Height="50" Margin="10,0,0,0" VerticalAlignment="Center" Width="770">
+            <Label Content="Restaurante Serve Bem" Foreground="#FF021E44" FontSize="18" FontFamily="Arial" Height="29" Width="399"/>
+        </WrapPanel>
+
+        <WrapPanel Margin="0,24,0,14" Grid.Row="1">
+            <DatePicker x:Name ="dtpDataVenda" Width="175" Height="50" HorizontalAlignment="Left" BorderThickness="2" FontSize="20"/>
+            <ComboBox x:Name="comboBoxFuncionario" DisplayMemberPath="Nome" SelectedValuePath="Id" Width="400"/>
+            <ComboBox x:Name="comboBoxCliente" DisplayMemberPath="Nome" SelectedValuePath="Id" Width="400" />
+        </WrapPanel>
+
+        <WrapPanel Grid.Row="2" VerticalAlignment="Center" Height="35">
+            <TextBlock FontSize="25" Text="Lista de produtos "></TextBlock>
+            <Button x:Name="btnAdicionarProd" HorizontalAlignment="Right" Content="Adicionar produtos" FontSize="15" Height="35" Width="200" Margin="0,0,375,0" Click="BtnAdicionarProd_Click"/>
+            <ComboBox x:Name="comboBoxMesa" DisplayMemberPath="Numero" SelectedValuePath="Id" Width="100"/>
+            <TextBlock x:Name="numeroPedido" IsEnabled="False" Width="100" TextAlignment="Center" FontSize="25"/>
+        </WrapPanel>
+
+
+        <WrapPanel Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Height="75" Width="400">
+            <Button HorizontalAlignment="Right" Content="Finalizar compra" FontSize="25" Height="75" Width="400" />
+        </WrapPanel>
+
+        <ScrollViewer Grid.Row="2"  
+              ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,59,0,0" Grid.RowSpan="2">
+            <ScrollViewer Grid.Row="2" 
+              ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <DataGrid x:Name="dataGridPedidos" 
+                   CanUserAddRows="False"
+                   CanUserDeleteRows="False"
+                   AutoGenerateColumns="False" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2"
+                   
+                   ColumnWidth="*">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" IsReadOnly="True" Binding="{Binding Id}"/>
+                        <DataGridTextColumn Header="Nome do produto" IsReadOnly="True" Binding="{Binding Produto.Nome}"/>
+                        <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}"/>
+                        <DataGridTextColumn Header="Valor" IsReadOnly="True" Binding="{Binding Produto.Valor, ConverterCulture='pt-BR', StringFormat=C}"/>
+                        <DataGridTextColumn Header="Valor Total" IsReadOnly="True" Binding="{Binding ValorTotal, ConverterCulture='pt-BR', StringFormat=C}"/>
+                        <DataGridTemplateColumn Header="Remover">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Remover" 
+                                Height="15" FontSize="10" Padding="0"
+                                ToolTip="Remover produto da lista de compras"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </ScrollViewer>
+        </ScrollViewer>
+    </Grid>
+</Window>
